@@ -57,6 +57,7 @@
  
 <script>
 $(function(){
+   $.event.special.swipe.horizontalDistanceThreshold = 100;
   // Bind the swipeleftHandler callback function to the swipe event on div.box
   $(document ).on( "swipeleft", function(){
       document.getElementById('output').innerHTML = "Left";
