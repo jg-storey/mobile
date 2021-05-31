@@ -60,11 +60,12 @@ $(function(){
   // Bind the swipeleftHandler callback function to the swipe event on div.box
   $(document ).on( "swipeleft", function(){
       document.getElementById('output').innerHTML = "Left";
+    window.location.href = "https://jamesstorey.co.nz";
   });
   
   $(document ).on( "swiperight", function(){
       document.getElementById('output').innerHTML = "Right";
-      window.location.href = "https://jamesstorey.co.nz";
+      
   });   
 });
 </script>
