@@ -52,18 +52,20 @@
 </head>
 <body>
  
-<h3>Swipe the green rectangle in the left direction to change its color:</h3>
-<div class="box"></div>
+<h3>Swipe right to go to next page:</h3>
+<div id="output" class="box"></div>
  
 <script>
 $(function(){
   // Bind the swipeleftHandler callback function to the swipe event on div.box
-  $( "div.box" ).on( "swipeleft", swipeleftHandler );
- 
-  // Callback function references the event target and adds the 'swipeleft' class to it
-  function swipeleftHandler( event ){
-    $( event.target ).addClass( "swipeleft" );
-  }
+  $(document ).on( "swipeleft", function(){
+      document.getElementById('output').innerHTML = "Left";
+  });
+  
+  $(document ).on( "swiperight", function(){
+      document.getElementById('output').innerHTML = "Right";
+      window.location.href = "https://jamesstorey.co.nz";
+  });   
 });
 </script>
  
